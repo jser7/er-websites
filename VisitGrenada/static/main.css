@@ -1,0 +1,78 @@
+@keyframes fadeInFromTop {
+  0% {
+      opacity: 0;
+      transform: translateY(200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.fade-in {
+  animation: fadeInFromTop 2s ease-out forwards;
+}
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('OldeEnglish.ttf')  format('truetype'), /* IE9 Compat Modes */
+  }
+  
+  body {
+    font-family: 'MyWebFont', Fallback, sans-serif;
+  }
+
+body {
+    background-color: white;
+    overflow:auto;
+}
+
+#head {
+    color: white;
+}
+
+br {
+    color: black;
+}
+
+.fade-in-sect {
+  color: black;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    height: 99.9%;
+    width: 100%;
+    
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 14%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #df1d1d; 
+    font-size: 16em; 
+    font-family: 'MyWebFont', Fallback, sans-serif;
+    text-align: center;
+    z-index: 0;
+  }
