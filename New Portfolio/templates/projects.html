@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-100 py-12">
+    <div class="container mx-auto px-6 lg:px-8">
+
+        <!-- Page Heading -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">My Projects</h1>
+            <p class="text-lg text-gray-700">Here are some of the projects I've worked on recently. Each project reflects my skills and passion for web development, and problem-solving.</p>
+        </div>
+
+        <!-- Project 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="flex flex-col text-right justify-center">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">Project One: Task Scheduler Website</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    A productivity tool that helps users schedule tasks in an RPG-style environment, where completing tasks rewards users with XP and items. The website allows task tracking with a game-ified twist to incentivize productivity.
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li>Real-time task completion rewards system.</li>
+                    <li>Customizable task difficulty and reward system.</li>
+                    <li>Responsive design with a vibrant, gamified UI.</li>
+                </ul>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <img src="/static/images/project1.png" alt="Task Scheduler Preview 1" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="/static/images/project4.png" alt="Task Scheduler Preview 2" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="lg:order-2 flex text-left flex-col justify-center">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">Project Two: Grenada Tourism Website</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    A vibrant, modern tourism website built to showcase the beauty and culture of Grenada, incorporating an engaging design to improve user experience for visitors and locals alike.
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li>Highlights the island's vibrant culture.</li>
+                    <li>High Quality tourism photos.</li>
+                    <li>Personal touch.</li>
+                </ul>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <img src="/static/images/project2.png" alt="Tourism Website Preview 1" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="/static/images/project3.png" alt="Tourism Website Preview 2" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="flex flex-col text-right justify-center">
+                <h2 class="text-3xl font-bold text-indigo-900 mb-4">Project Three: Supercell Stat Tracker</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Made for a college project, this was my first try at creating a functional website. I managed to get a small demo running on my home computer which allowed for stat tracking, but due to my limited back-end skills at the time, I didn't manage to get it running in a proper setting.
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li>Accurate Stat Tracking through API.</li>
+                    <li>Different theming options available.</li>
+                    <li>Accessibility options for those with Dyslexia.</li>
+                </ul>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <img src="/static/images/project6.png" alt=" Preview 1" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="/static/images/project7.png" alt=" Preview 2" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

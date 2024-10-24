@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</head>
+<body>
+
+<div class="min-h-screen px-6 py-12 bg-gray-100">
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <div class="lg:order-2">
+      <img src="static/images/stylized_turtle_transparent_large.png" alt="Project 1" class="bg-yellow-100 w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="flex flex-col justify-center">
+      <h2 class="text-4xl font-bold text-indigo-900 mb-4">Biography</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        I'm a 17 year old aspiring programmer, currently enrolled in a 2 year T-Level Software Development course at Access Creative Norwich.<br></br>
+        I've always had a passion for code and creation, being on computers since I was as young as 6 years old. I enjoyed playing games such as ROBLOX & Minecraft, and was always interested in how they were made, so it didn't take long for me to start trying to make my own ROBLOX games, Minecraft servers, etc. This gave me a real taste for digital creation, which I've carried with me till present day, now aspiring to move into Machine Learning & Web Development.<br></br>
+        My current project is a development of several websites under the name of E-R Sites, which includes a plethora of different projects, these can be seen below.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+{% include 'ersites.html' %}
+
+
+{% endblock %}

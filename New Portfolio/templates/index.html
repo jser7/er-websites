@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</head>
+<body>
+
+<div id="threejs-canvas"></div>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="text-6xl font-extrabold text-indigo-900 mb-6">Jaden Ebbage-Renwick</h1>
+    <p class="text-xl text-gray-700 leading-relaxed mb-4">
+      I'm a college student pursuing a career in programming. I enjoy machine learning, web development and design, and I'm currently working on creating sleek and functional websites, including this one.
+    </p>
+  </div>
+</div>
+<script>
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById('threejs-canvas').appendChild(renderer.domElement);
+
+  const geometry = new THREE.SphereGeometry(1, 64, 64); 
+  const material = new THREE.MeshBasicMaterial({ color: 0x4c51bf, wireframe: true });
+  const sphere = new THREE.Mesh(geometry, material);
+  scene.add(sphere);
+
+  sphere.position.set(0, 2, 0);
+  camera.position.z = 5;
+
+  let mouse = { x: 0, y: 0 };
+  let scaleFactor = 1;
+  const maxScale = 1.5;  
+  const minScale = 0.5;  
+  const hoverThreshold = 0.3;  
+
+  document.addEventListener('mousemove', (event) => {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    const distanceX = Math.abs(mouse.x * window.innerWidth / window.innerHeight - sphere.position.x);
+    const distanceY = Math.abs(mouse.y - sphere.position.y / camera.position.z);
+
+    if (distanceX < hoverThreshold && distanceY < hoverThreshold) {
+      scaleFactor = Math.min(scaleFactor + 0.05, maxScale);
+    } else {
+      scaleFactor = Math.max(scaleFactor - 0.05, minScale);
+    }
+
+    sphere.scale.set(scaleFactor, scaleFactor, scaleFactor);
+
+    sphere.rotation.x = mouse.y * Math.PI / 6;
+    sphere.rotation.y = mouse.x * Math.PI / 6;
+  });
+
+
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+</script>
+
+<div class="min-h-screen px-6 py-12 bg-gray-100">
+
+  <div class="fade-in-sect grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <div class="lg:order-2">
+      <img src="/static/images/project1.png" alt="Project 1" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="flex flex-col text-right justify-center">
+      <h2 class="text-4xl font-bold text-indigo-900 mb-4">Projects</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        Whether it be for a college project or a personal project, I enjoy creating. More specifically, I enjoy creating fresh ideas and solutions to problems that are relevant to me.<br></br>
+        My two most recent projects are a brilliant example of this, the first being a tourism site for Grenada, a Caribbean island which many of my family members call home. Their current tourism website is not bad, but I felt it could be better, more personal, more vibrant, and better highlight the amazing culture that the Caribbean and Grenada has to offer.<br></br>
+        The latter being a task scheduling website, which has amazing versality. Personally, I found that scheduling can be hard, revising can be hard, doing any task can sometimes be quite hard. But for me, this all falls under the issue of time management, properly allowing yourself enough time to get through all the tasks you set yourself or have been set can be hard, so I created a website that not only makes it easier to schedule tasks in your day, but also rewards you in an RPG game-ified way, which made scheduling interesting for me and many others in my age demographic.
+      </p>
+    </div>
+  </div>
+
+  <div class="fade-in-sect grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <div>
+      <img src="/static/images/project2.png" alt="Project 2" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="flex flex-col text-left justify-center">
+      <h2 class="text-4xl font-bold text-indigo-900 mb-4">Interests</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        What I enjoy, what I find interesting, and what I find relevant, is at the core of everything I create. I find the most comfort solving problems that are relevant to me, and creating content I find interesting. A substantial amount of media and creation at the moment can often be dull, and there's no personification in a lot it. My projects always have a personal touch, something that means I can explain why I made the project, why I did this, why I did that, and I put that as my highest priority.<br></br>
+        I'm a college student, a vegan, a young person, etc. There are a lot of values that I hold myself to, and a lot of issues that are incredibly relevant to me. Creation is an outlet for this, allowing me to bring my values into a physical form, embuing my creations with a feeling of relevancy, a feeling of "this was needed", and not just creating for the sake of creating.
+      </p>
+    </div>
+  </div>
+
+  <div class="fade-in-sect grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <div class="lg:order-2">
+      <img src="/static/images/project3.png" alt="Project 3" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="flex flex-col text-right justify-center">
+      <h2 class="text-4xl font-bold text-indigo-900 mb-4">Education</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        I'm currently in my 2nd year of a 2 Year Level 3 T-Level Software Development course, refining my skills with general software development, web development, etc. After College, I plan to go to university for an Artificial Intelligence course, as that's what interests me most.
+        I passed 9 GCSEs at 4 or above at highschool, including computer science, english, maths, etc.
+      </p>
+    </div>
+  </div>
+
+  <div class="fade-in-sect grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <div>
+      <img src="/static/images/project4.png" alt="Project 4" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="flex flex-col text-left justify-center">
+      <h2 class="text-4xl font-bold text-indigo-900 mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        I'm a 17 year old college student, hoping to one day be at the forefront of Artificial Intelligence and Machine Learning development. 
+        Coding is my favourite hobby, doing it whenever I get freetime. I'm also from the Norwich area in East Anglia.
+      </p>
+    </div>
+  </div>
+
+  <div class="fade-in-sect grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <div class="lg:order-2">
+      <img src="/static/images/project5.png" alt="Project 5" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+    <div class="flex flex-col text-right justify-center">
+      <h2 class="text-4xl font-bold text-indigo-900 mb-4">Experience</h2>
+      <p class="text-lg leading-relaxed text-gray-700">
+        Although I'm still refining my skills everyday, I have a range of experience with full-stack development.
+        I prefer front-end development and refining user experience, however I do have some level of back-end experience, shown in my Task Scheduler website, which uses databases to store user accounts and RPG style inventories.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const elementsToFadeIn = document.querySelectorAll('.fade-in-sect');
+
+      function checkScroll() {
+          const triggerBottom = window.innerHeight - 100;
+
+          elementsToFadeIn.forEach(element => {
+              const elementTop = element.getBoundingClientRect().top;
+
+              if (elementTop < triggerBottom) {
+                  element.classList.add('fade-in');
+              }
+          });
+      }
+
+      window.addEventListener('scroll', checkScroll);
+
+      checkScroll();
+  });
+</script>
+
+{% endblock %}

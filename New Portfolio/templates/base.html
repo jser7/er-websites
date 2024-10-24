@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}?v=2">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="ui inverted segment" style="margin: 0; display: flex; align-items: center; align-content: center; justify-content: center;">
+        <div class="ui inverted secondary pointing menu">
+          <a class="item" href="/">
+            Home
+          </a>
+          <a class="item" href="/projects">
+            Projects
+          </a>
+          <a class="item" href="/biography">
+            Biography
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+        
+
+</body>
+</html>
