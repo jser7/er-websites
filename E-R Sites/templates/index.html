@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Call to Action Section -->
+<section class="relative bg-gray-100 py-20 text-center dark:bg-gray-950">
+    <!-- Logo -->
+    <div class="mb-8">
+      <img src="/static/images/ersitesblack.png" alt="Logo" class="mx-auto h-16 dark:hidden">
+      <img src="/static/images/ersiteswhite.png" alt="Logo (White)" class="mx-auto h-16 hidden dark:block">
+    </div>
+
+    <!-- CTA Content -->
+    <div class="relative container mx-auto px-4 max-w-3xl">
+      <h2 class="text-6xl font-extrabold text-gray-900 leading-tight mb-6 font-playfair dark:text-gray-100">
+        A plethora of intuitive, problem solving designs.
+      </h2>
+      <p class="text-lg text-gray-900 mb-10 font-lora dark:text-gray-300">
+        Explore cutting-edge components crafted for modern developers. Build faster, design better, and impress with your websites.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex justify-center space-x-4">
+        <a href="{{ url_for('projects') }}" class="bg-yellow-500 text-gray-900 py-3 px-8 rounded-full shadow-lg text-lg font-medium hover:bg-yellow-400 transition duration-300 ease-in-out">
+          View Projects
+        </a>
+        <a href="{{ url_for('about') }}" class="bg-transparent border-2 border-gray-600 text-gray-900 py-3 px-8 rounded-full shadow-lg text-lg font-medium hover:text-white transition duration-300 ease-in-out hover:bg-gray-700 dark:text-gray-100 dark:border-gray-400 dark:hover:bg-gray-600">
+          Learn More
+        </a>
+      </div>
+    </div>
+</section>
+
+<!-- Showcase of Work Section -->
+<section class="py-20 dark:bg-gray-950">
+    <div class="px-4">
+        <h2 class="text-5xl font-playfair text-gray-900 text-center mb-12 dark:text-gray-100">
+            Our Recent Work
+        </h2>
+
+        <!-- Horizontal Showcase -->
+        <div class="flex overflow-x-visible space-x-8 py-6">
+            <!-- Project Card 1 -->
+             <div class="min-w-[320px] max-w-[420px] bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out relative">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="/static/images/project1.png" alt="Project 1" class="w-full h-full object-cover">
+                </div>
+                <div class="flex justify-center my-2">
+                    <div class="h-1 w-3/4 bg-gradient-to-r from-transparent via-gray-400 to-transparent rounded-full"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <img src="/static/images/dedication.ico" alt="Project One Icon" class="w-6 h-6 mr-2">
+                        <h3 class="text-2xl font-lora text-gray-900">Dedication</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">A task scheduling website with an RPG element.</p>
+                    <a href="/project1" class="inline-block bg-yellow-500 text-gray-900 py-2 px-4 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 ease-in-out">
+                        Visit Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="min-w-[320px] max-w-[420px] bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out relative">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="/static/images/project2.png" alt="Project 2" class="w-full h-full object-cover">
+                </div>
+                <div class="flex justify-center my-2">
+                    <div class="h-1 w-3/4 bg-gradient-to-r from-transparent via-gray-400 to-transparent rounded-full"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <img src="/static/images/grenada.ico" alt="Project Two Icon" class="w-6 h-6 mr-2">
+                        <h3 class="text-2xl font-lora text-gray-900">Visit Grenada</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">An elegant and extensive tourism website for Grenada.</p>
+                    <a href="/project2" class="inline-block bg-yellow-500 text-gray-900 py-2 px-4 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 ease-in-out">
+                        Visit Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="min-w-[320px] max-w-[420px] bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out relative">
+                <div class="relative h-56 overflow-hidden">
+                    <img src="/static/images/project3.png" alt="Project 3" class="w-full h-full object-cover">
+                </div>
+                <div class="flex justify-center my-2">
+                    <div class="h-1 w-3/4 bg-gradient-to-r from-transparent via-gray-400 to-transparent rounded-full"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <img src="/static/images/portfolio.ico" alt="Project Three Icon" class="w-6 h-6 mr-2">
+                        <h3 class="text-2xl font-lora text-gray-900">My Portfolio</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">A thorough overview of me and my projects with a modern design.</p>
+                    <a href="/project3" class="inline-block bg-yellow-500 text-gray-900 py-2 px-4 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 ease-in-out">
+                        Visit Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section for Website Updates -->
+<section class="bg-gray-100 py-24 sm:py-32 dark:bg-gray-950">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 text-center lg:text-left">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">Website Updates</h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-100">Stay updated with the latest news and updates from our website.</p>
+      </div>
+  
+      <!-- Horizontal scrolling posts container -->
+      <div class="relative mt-10 flex space-x-6 overflow-x-auto py-10">
+        <div class="flex space-x-6 w-full overflow-x-auto">
+  
+          <!-- Post 1 -->
+          <article class="min-w-[320px] max-w-[400px] bg-white rounded-lg shadow-lg p-6 flex flex-col relative">
+            <img src="/static/images/grenada.ico" alt="Project Icon" class="absolute top-4 left-4 w-6 h-6">
+            <span class="absolute top-4 right-4 bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-600 rounded-full">Feature Update</span>
+            <div class="mt-10"> <!-- Increased margin-top to create space for favicon -->
+              <h3 class="text-lg font-semibold text-gray-900">
+                <a href="#">Introducing New Features</a>
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">Discover the latest features we've added to enhance your experience.</p>
+            </div>
+          </article>
+  
+          <!-- Post 2 -->
+          <article class="min-w-[320px] max-w-[400px] bg-white rounded-lg shadow-lg p-6 flex flex-col relative">
+            <img src="/static/images/dedication.ico" alt="Project Icon" class="absolute top-4 left-4 w-6 h-6">
+            <span class="absolute top-4 right-4 bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-600 rounded-full">Bug Fix</span>
+            <div class="mt-10"> <!-- Increased margin-top to create space for favicon -->
+              <h3 class="text-lg font-semibold text-gray-900">
+                <a href="#">Recent Bug Fixes</a>
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">We've resolved several bugs to make your experience smoother.</p>
+            </div>
+          </article>
+  
+          <!-- Post 3 -->
+          <article class="min-w-[320px] max-w-[400px] bg-white rounded-lg shadow-lg p-6 flex flex-col relative">
+            <img src="/static/images/portfolio.ico" alt="Project Icon" class="absolute top-4 left-4 w-6 h-6">
+            <span class="absolute top-4 right-4 bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-600 rounded-full">Published</span>
+            <div class="mt-10"> <!-- Increased margin-top to create space for favicon -->
+              <h3 class="text-lg font-semibold text-gray-900">
+                <a href="#">Website Published!</a>
+              </h3>
+              <p class="mt-2 text-sm text-gray-600">We've officially published the website!</p>
+            </div>
+          </article>
+  
+          <!-- Add more posts here -->
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+{% endblock %}

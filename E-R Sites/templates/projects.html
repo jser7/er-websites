@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Projects Page -->
+<section class="dark:bg-gray-950 bg-gray-100 py-24">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="text-5xl font-bold text-center dark:text-gray-100 text-gray-900 mb-16 font-playfair">Our Projects</h2>
+
+        <!-- Project Section 1 -->
+        <div class="mb-24 flex flex-col lg:flex-row items-center shadow-lg rounded-lg overflow-hidden">
+            <div class="lg:w-1/2 p-10">
+                <img src="/static/images/dedication.ico" alt="Project One Icon" class="w-6 h-6 mr-2">
+                <h3 class="text-3xl font-semibold text-indigo-500 mb-4">Dedication</h3>
+                <p class="text-gray-600 dark:text-gray-100 mb-6">
+                    Dedication is a task-scheduling website with an RPG element that keeps users engaged. The whole idea for this came from my own problem of never being able to find time to schedule tasks and keep to any schedules I do get time to make, so I made a website that has progression, easy task creation, and a modern touch.
+                </p>
+                <div class="mb-6">
+                    <h4 class="text-xl font-medium text-gray-600 dark:text-gray-100 mb-2">Key Features:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-blue-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Responsive Design</p>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">RPG Element</p>
+                        </div>
+                        <div class="bg-pink-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Modern Design</p>
+                        </div>
+                        <div class="bg-purple-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">User-Friendly Interface</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-xl font-medium text-gray-600 dark:text-gray-100 mb-2">Project Highlights:</h4>
+                <p class="text-gray-500 dark:text-gray-50 mb-6">
+                    The site features a stunning homepage, an elegant and easy to use dashboard, and secure user accounts and inventories.
+                </p>
+                <a href="#" class="bg-transparent border-2 border-gray-600 text-gray-600 dark:text-gray-100 py-3 px-8 rounded-full shadow-lg text-lg font-medium hover:text-indigo-500 transition duration-300 ease-in-out hover:bg-gray-700 transition duration-300 ease-in-out">
+                    View Project
+                </a>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="/static/images/project1.png" alt="Project One" class="w-full h-full object-cover shadow-lg">
+            </div>
+        </div>
+
+        <!-- Project Section 2 -->
+        <div class="mb-24 flex flex-col lg:flex-row-reverse items-center shadow-lg rounded-lg overflow-hidden">
+            <div class="lg:w-1/2 p-10">
+                <img src="/static/images/grenada.ico" alt="Project One Icon" class="w-6 h-6 mr-2">
+                <h3 class="text-3xl font-semibold text-indigo-500 mb-4">Visit Grenada</h3>
+                <p class="text-gray-600 dark:text-gray-100 mb-6">
+                    Having a personal connection to the beautiful island of Grenada, I took it upon myself to create an elegant modern tourism website to promote the island and showcase it's glory and hidden treasures of nature, in a thorough and engaging way.
+                </p>
+                <div class="mb-6">
+                    <h4 class="text-xl font-medium text-gray-600 dark:text-gray-100 mb-2">Key Features:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-orange-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Over a dozen pages of information</p>
+                        </div>
+                        <div class="bg-yellow-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Modern, elegant & luxurious designs</p>
+                        </div>
+                        <div class="bg-indigo-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">High Quality images</p>
+                        </div>
+                        <div class="bg-pink-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Personalised touch</p>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-xl font-medium text-gray-600 dark:text-gray-100 mb-2">Unique Element:</h4>
+                <p class="text-gray-500 dark:text-gray-50 mb-6">
+                    Having a personal connection, and having been to the island numerous times, I was able to properly display everything the island has to offer with first hand experiences.
+                </p>
+                <a href="#" class="bg-transparent border-2 border-gray-600 text-gray-600 dark:text-gray-100 py-3 px-8 rounded-full shadow-lg text-lg font-medium hover:text-indigo-500 transition duration-300 ease-in-out hover:bg-gray-700 transition duration-300 ease-in-out">
+                    View Project
+                </a>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="/static/images/project2.png" alt="Project Two" class="w-full h-full object-cover shadow-lg">
+            </div>
+        </div>
+
+        <!-- Project Section 3 -->
+        <div class="mb-24 flex flex-col lg:flex-row items-center shadow-lg rounded-lg overflow-hidden">
+            <div class="lg:w-1/2 p-10">
+                <img src="/static/images/portfolio.ico" alt="Project One Icon" class="w-6 h-6 mr-2">
+                <h3 class="text-3xl font-semibold text-indigo-500 mb-4">My Portfolio</h3>
+                <p class="text-gray-600 dark:text-gray-100 mb-6">
+                    This project is my own Portfolio, which showcases my projects and biography in a thorough and extensive way. It also utilises a neat ThreeJS sphere on the homepage which is responsive the user's mouse.
+                </p>
+                <div class="mb-9">
+                    <h4 class="text-xl font-medium text-gray-600 dark:text-gray-100 mb-2">Key Features:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-purple-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Thorough details</p>
+                        </div>
+                        <div class="bg-pink-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Personal Biography</p>
+                        </div>
+                        <div class="bg-red-100 p-4 rounded-lg shadow-lg">
+                            <p class="font-semibold text-gray-800">Social Media Links</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="bg-transparent border-2 border-gray-600 text-gray-600 dark:text-gray-100 py-3 px-8 rounded-full shadow-lg text-lg font-medium hover:text-indigo-500 transition duration-300 ease-in-out hover:bg-gray-700 transition duration-300 ease-in-out">
+                    View Project
+                </a>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="/static/images/project3.png" alt="Project Three" class="w-full h-full object-cover shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

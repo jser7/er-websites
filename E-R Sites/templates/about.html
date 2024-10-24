@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="bg-gray-100 dark:bg-gray-950 py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl font-playfair">Our Mission</h2>
+      <p class="mt-6 text-xl text-gray-600 dark:text-gray-50 leading-8">
+        At E-R Sites, our mission is to build websites that address real-world challenges with a focus on luxury, functionality, and responsiveness. 
+        Every site we craft is a reflection of our passion and commitment to making digital solutions that matter.
+      </p>
+    </div>
+  </section>
+
+<section class="bg-gray-100 dark:bg-gray-950 py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl text-center font-playfair">Our History</h2>
+      <div class="mt-12 grid gap-y-20 gap-x-8 lg:grid-cols-2">
+        
+        <!-- Website 1 -->
+        <div class="flex items-start">
+            <img src="/static/images/grenada.ico" alt="Project One Icon" class="w-12 h-12">
+          <div class="ml-6">
+            <h3 class="text-2xl font-semibold leading-7 text-gray-900 dark:text-gray-100">Visit Grenada</h3>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-50">
+              Our first project, a tourism website for Grenada with a personal touch.
+              <br><span class="font-semibold">Launch Date:</span> September 2024.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Website 1 -->
+        <div class="flex items-start">
+            <img src="/static/images/dedication.ico" alt="Project One Icon" class="w-12 h-12">
+          <div class="ml-6">
+            <h3 class="text-2xl font-semibold leading-7 text-gray-900 dark:text-gray-100">Dedication</h3>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-50">
+              Our second project, designed to simplify task management and boost productivity through gamification. 
+              <br><span class="font-semibold">Launch Date:</span> October 2024.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Website 1 -->
+        <div class="flex items-start">
+            <img src="/static/images/portfolio.ico" alt="Project One Icon" class="w-12 h-12">
+            <div class="ml-6">
+            <h3 class="text-2xl font-semibold leading-7 text-gray-900 dark:text-gray-100">Jaden's Portfolio</h3>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-50">
+                Jaden's Portfolio, designed with care and consideration, and with a modern artistic vision.
+                <br><span class="font-semibold">Launch Date:</span> October 2024.
+            </p>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-100 dark:bg-gray-950 py-24 sm:py-32">
+    <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl font-playfair">Meet the Developers</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-50">We are a passionate development group creating websites that are both functional and beautiful, solving problems that resonate with us.</p>
+      </div>
+      
+      <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+        
+        <!-- Developer 1 -->
+        <li>
+          <div class="flex items-center gap-x-6">
+            <img class="h-16 w-16 rounded-full" src="/static/images/jaden.jpg" alt="Developer Image">
+            <div>
+              <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100">Jaden Ebbage-Renwick</h3>
+              <p class="text-sm font-semibold leading-6 text-teal-600">Lead Developer / Founder</p>
+              <p class="text-sm text-gray-600 dark:text-gray-50 mt-2">Jaden is the Lead Developer and Founder of E-R sites, bringing an artistic vision to the development group that sets us apart.</p>
+              
+            <!-- Social Media Buttons -->
+            <div class="mt-4 flex space-x-4">
+                <a href="https://instagram.com/jaden.ebb" target="_blank" class="text-gray-500 hover:text-gray-900">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5ZM12 6.52a5.48 5.48 0 1 1 0 10.96a5.48 5.48 0 0 1 0-10.96Zm6.75 0a1.1 1.1 0 1 1 0 2.2a1.1 1.1 0 0 1 0-2.2ZM12 8.26a3.74 3.74 0 1 0 0 7.48a3.74 3.74 0 0 0 0-7.48Z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/jser7" target="_blank" class="text-gray-500 hover:text-gray-900">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.5.5.093.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.53 1.03 1.53 1.03.892 1.528 2.341 1.087 2.91.831.092-.647.35-1.087.636-1.337-2.22-.253-4.555-1.11-4.555-4.944 0-1.092.39-1.985 1.03-2.683-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.806c.851.004 1.707.115 2.507.338 1.908-1.294 2.747-1.025 2.747-1.025.546 1.378.202 2.397.099 2.65.642.698 1.03 1.591 1.03 2.683 0 3.842-2.339 4.687-4.566 4.936.36.31.68.92.68 1.854 0 1.338-.012 2.42-.012 2.75 0 .268.18.58.688.481A10.017 10.017 0 0 0 22 12c0-5.523-4.477-10-10-10Z"/>
+                  </svg>
+                </a>
+              </div>
+  
+            </div>
+          </div>
+        </li>
+  
+        <!-- Add more developers as needed... -->
+  
+      </ul>
+    </div>
+  </div>
+{% endblock %}

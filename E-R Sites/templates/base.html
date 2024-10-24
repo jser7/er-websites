@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}E-R Sites{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/ersitesblack.png') }}?v=2">
+    
+    <!-- Stylesheets and Fonts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: 'media', // You can set to 'class' for manual toggle
+        theme: {
+          extend: {},
+        },
+      }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md dark:bg-black">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Logo and Website Name -->
+        <div class="flex items-center">
+          <img id="logo" src="{{ url_for('static', filename='images/ersitesblack.png') }}" alt="Logo" class="h-10 w-14 mr-3">
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="space-x-6">
+          <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Home</a>
+          <a href="{{ url_for('projects') }}" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Projects</a>
+          <a href="{{ url_for('about') }}" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+
+    <footer class="bg-white dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl">
+            <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Pages</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="{{ url_for('index') }}" class="hover:underline">Home</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="{{ url_for('projects') }}" class="hover:underline">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About Us</h2>
+                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                            <a href="/aboutus" class="hover:underline">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Contact Section (Bottom Left) -->
+            <div class="flex justify-between items-center px-6 py-8 bg-white dark:bg-gray-900 shadow-lg">
+                <div class="flex items-center space-x-6">
+                    <!-- GitHub Icon -->
+                    <a href="https://github.com/jser7" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 text-gray-900 dark:text-gray-400">
+                            <path d="M12 0C5.372 0 0 5.373 0 12c0 5.304 3.438 9.799 8.205 11.387.6.111.82-.261.82-.58 0-.287-.011-1.046-.017-2.053-3.338.725-4.042-1.609-4.042-1.609-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.805 1.304 3.49.997.108-.775.418-1.305.761-1.605-2.665-.305-5.466-1.334-5.466-5.934 0-1.312.469-2.384 1.236-3.225-.125-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.516 11.516 0 0 1 3.005-.404c1.02.004 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.653.245 2.873.12 3.176.77.841 1.236 1.913 1.236 3.225 0 4.609-2.805 5.625-5.475 5.921.431.371.815 1.102.815 2.222 0 1.604-.014 2.896-.014 3.292 0 .321.216.696.826.577C20.565 21.798 24 17.304 24 12 24 5.373 18.628 0 12 0z"/>
+                        </svg>
+                    </a>
+    
+                    <!-- Instagram Icon -->
+                    <a href="https://instagram.com/jaden.ebb" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 text-gray-900 dark:text-gray-400">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.917 4.917 0 0 1 1.788 1.035c.485.485.854 1.077 1.034 1.787.163.46.35 1.26.403 2.43.059 1.266.071 1.647.071 4.851 0 3.204-.012 3.584-.07 4.85-.054 1.17-.24 1.97-.403 2.43a4.918 4.918 0 0 1-1.035 1.788 4.919 4.919 0 0 1-1.787 1.034c-.46.163-1.26.35-2.43.403-1.266.059-1.647.071-4.851.071-3.204 0-3.584-.012-4.85-.07-1.17-.054-1.97-.24-2.43-.403a4.917 4.917 0 0 1-1.788-1.035A4.919 4.919 0 0 1 2.164 19.85c-.163-.46-.35-1.26-.403-2.43-.059-1.266-.071-1.647-.071-4.851 0-3.204.012-3.584.07-4.85.054-1.17.24-1.97.403-2.43a4.917 4.917 0 0 1 1.035-1.788 4.918 4.918 0 0 1 1.787-1.034c.46-.163 1.26-.35 2.43-.403C8.415 2.175 8.796 2.163 12 2.163M12 0C8.74 0 8.332.015 7.052.072 5.77.128 4.737.314 3.91.613a7.068 7.068 0 0 0-2.57 1.643 7.068 7.068 0 0 0-1.643 2.57c-.298.827-.485 1.86-.541 3.141C.015 8.332 0 8.74 0 12c0 3.26.015 3.668.072 4.948.056 1.282.243 2.314.541 3.141a7.068 7.068 0 0 0 1.643 2.57 7.068 7.068 0 0 0 2.57 1.643c.827.298 1.86.485 3.141.541 1.282.056 1.69.072 4.948.072 3.26 0 3.668-.015 4.948-.072 1.282-.056 2.314-.243 3.141-.541a7.068 7.068 0 0 0 2.57-1.643 7.068 7.068 0 0 0 1.643-2.57c.298-.827.485-1.86.541-3.141.056-1.282.072-1.69.072-4.948 0-3.26-.015-3.668-.072-4.948-.056-1.282-.243-2.314-.541-3.141a7.068 7.068 0 0 0-1.643-2.57 7.068 7.068 0 0 0-2.57-1.643c-.827-.298-1.86-.485-3.141-.541C15.668.015 15.26 0 12 0z"/>
+                            <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-10.845a1.44 1.44 0 1 0-2.88 0 1.44 1.44 0 0 0 2.88 0z"/>
+                        </svg>
+                    </a>
+    
+                    <!-- Email Icon -->
+                    <a href="mailto:" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 text-gray-900 dark:text-gray-400">
+                            <path d="M1.5 4.5h21v15h-21v-15zm19.5 2.25l-9 5.625-9-5.625v10.5h18v-10.5zm-9 4.125l9-5.625h-18l9 5.625z"/>
+                        </svg>
+                    </a>
+                </div>
+    
+                <!-- Branding (Bottom Right) -->
+                <a href="/" class="flex items-center space-x-4">
+                    <img src="/static/images/ersitesblack.png" alt="Logo" class="mx-auto h-8 dark:hidden">
+                    <img src="/static/images/ersiteswhite.png" alt="Logo (White)" class="mx-auto h-8 hidden dark:block">
+                    <div class="leading-tight">
+                        <span class="block text-lg font-semibold tracking-wide text-gray-900 dark:text-gray-400 font-playfair">E-R Websites</span>
+                        <span class="block text-xs tracking-wider text-gray-400">EST. 2024</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript to handle logo swap for dark mode -->
+    <script>
+        // Check the user's dark mode preference and update logo
+        const logo = document.getElementById('logo');
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  
+        function updateLogo() {
+          if (prefersDarkScheme.matches) {
+            logo.src = "{{ url_for('static', filename='images/ersiteswhite.png') }}"; // White logo for dark mode
+          } else {
+            logo.src = "{{ url_for('static', filename='images/ersitesblack.png') }}"; // Black logo for light mode
+          }
+        }
+  
+        // Run logo update on page load and when color scheme changes
+        updateLogo();
+        prefersDarkScheme.addEventListener('change', updateLogo);
+      </script>
+
+</body>
+</html>
