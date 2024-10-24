@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('create_role') }}">
+    <label for="name">Role Name:</label>
+    <input type="text" name="name" required>
+
+    <h3>Assign Permissions</h3>
+    {% for permission in permissions %}
+    <div>
+        <input type="checkbox" id="{{ permission }}" name="permissions" value="{{ permission }}">
+        <label for="{{ permission }}">{{ permission.replace('_', ' ').capitalize() }}</label>
+    </div>
+    {% endfor %}
+    
+    <button type="submit">Create Role</button>
+</form>
+
+{% endblock %}

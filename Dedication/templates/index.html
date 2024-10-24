@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<body>
+    <!-- Hero Section -->
+    <div class="relative isolate px-6 pt-14 lg:px-8" style="z-index: -100;">
+        <!-- Animated Background -->
+<div class="absolute inset-x-0 -top-10 -z-10 transform-gpu overflow-hidden blur-2xl sm:-top-80" aria-hidden="true">
+    <div class="animate-background relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+</div>
+
+<!-- Add this CSS either inline in your <style> tag or in your CSS file -->
+<style>
+    @keyframes moveBackground {
+        0% {
+            transform: translateX(-50%) rotate(30deg);
+        }
+        50% {
+            transform: translateX(-48%) rotate(45deg);
+        }
+        100% {
+            transform: translateX(-50%) rotate(30deg);
+        }
+    }
+
+    .animate-background {
+        animation: moveBackground 20s infinite ease-in-out;
+    }
+</style>
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div class="text-center">
+                <img src="/static/images/dedication.ico" alt="E-R Sites Logo" class="mx-auto w-48 h-auto mb-8">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Welcome to <h1 class="text-4xl font-bold tracking-tight text-indigo-500 sm:text-6xl">Dedication.</h1></h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600">Dedication helps you track and schedule your tasks in a game-like manner, rewarding you with XP and items to incentivize productivity. Level up your efficiency and achieve your goals with a touch of gaming excitement!</p>
+                <div class="mt-10 flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-6">
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900">Features</h2>
+            <p class="mt-4 text-lg text-center text-gray-600">Explore the features that make Dedication unique and effective for managing your tasks and goals.</p>
+            <div class="mt-8 flex flex-wrap gap-6 justify-center">
+                <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Track Tasks</h3>
+                    <p class="mt-2 text-gray-600">Effortlessly track and manage your tasks with detailed scheduling and progress tracking.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Earn XP and Rewards</h3>
+                    <p class="mt-2 text-gray-600">Complete tasks to earn XP and collectible rewards, enhancing your productivity with a game-like experience.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Upgrade and Rebirth</h3>
+                    <p class="mt-2 text-gray-600">Upgrade your items and start anew with rebirth options to continuously challenge yourself.</p>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 max-w-xs text-center">
+                    <h3 class="text-xl font-semibold text-gray-800">Community and Support</h3>
+                    <p class="mt-2 text-gray-600">Join our community and get support to make the most out of Dedication and achieve your goals.</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="animate-background relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <div>
+        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+            <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
+              <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+              <defs>
+                <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                  <stop stop-color="#7775D6" />
+                  <stop offset="1" stop-color="#E935C1" />
+                </radialGradient>
+              </defs>
+            </svg>
+            <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Boost your productivity.<br>Start using Dedication today.</h2>
+              <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
+                <a href="{{ url_for('about') }}" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div class="relative mt-16 h-80 lg:mt-8">
+              <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="/static/images/preview.png" alt="App screenshot" width="1824" height="1080">
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+{% endblock %}

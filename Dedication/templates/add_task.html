@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Task{% endblock %}
+
+{% block content %}
+<h2>Add a New Task</h2>
+<form method="POST" action="/add_task">
+    <label for="title">Task Title</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description"></textarea>
+
+    <label for="difficulty">Difficulty</label>
+    <select id="difficulty" name="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <label for="due_date">Due Date</label>
+    <input type="date" id="due_date" name="due_date" required>
+
+    <button type="submit">Add Task</button>
+</form>
+
+{% endblock %}

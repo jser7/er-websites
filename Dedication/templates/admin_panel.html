@@ -1,0 +1,56 @@
+<!-- Admin Panel HTML -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="p-6 bg-gray-100">
+    <h1 class="text-3xl font-bold mb-4">Admin Panel</h1>
+
+    <!-- Edit Users Section -->
+    <h2 class="text-2xl font-semibold mb-4">Edit Users</h2>
+    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+        <thead>
+            <tr class="border-b bg-gray-50">
+                <th class="px-4 py-2 text-left text-gray-600">Username</th>
+                <th class="px-4 py-2 text-left text-gray-600">Role</th>
+                <th class="px-4 py-2 text-right text-gray-600">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr class="border-b">
+                <td class="px-4 py-2 text-gray-800">{{ user.username }}</td>
+                <td class="px-4 py-2 text-gray-800 capitalize">{{ user.role }}</td>
+                <td class="px-4 py-2 text-right">
+                    <a href="{{ url_for('edit_user', user_id=user.id) }}" class="text-blue-600 hover:text-blue-800">Edit</a> |
+                    <a href="{{ url_for('delete_user', user_id=user.id) }}" class="text-red-600 hover:text-red-800">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Assign Rewards Section -->
+    <h2 class="text-2xl font-semibold mt-8 mb-4">Assign Rewards</h2>
+    <form action="{{ url_for('assign_reward') }}" method="POST" class="space-y-4">
+        <div>
+            <label for="user" class="block text-sm font-medium text-gray-700">Select User</label>
+            <select id="user" name="user_id" class="block w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                {% for user in users %}
+                <option value="{{ user.id }}">{{ user.username }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="reward" class="block text-sm font-medium text-gray-700">Select Reward</label>
+            <select id="reward" name="reward_id" class="block w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                {% for reward in rewards %}
+                <option value="{{ reward.id }}">{{ reward.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md shadow-sm hover:bg-indigo-700">Assign Reward</button>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 p-4">
+                <h1 class="text-4xl font-bold text-gray-900">What is Dedication?</h1>
+                <p class="mt-4 text-gray-600">Dedication is a productivity application designed to help you track and schedule your tasks in a game-like manner. By integrating a rewarding system that includes experience points (XP) and collectible items, Dedication incentivizes users to enhance their productivity and achieve their goals.</p>
+            </div>
+            <div class="md:w-1/2 p-4">
+                <img src="/static/images/about1.png" alt="About Dedication" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 p-4">
+                <img src="/static/images/about2.png" alt="Features of Dedication" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 p-4">
+                <h2 class="text-3xl font-bold text-gray-900">Features</h2>
+                <ul class="mt-4 list-disc pl-6 text-gray-600">
+                    <li>Task tracking with XP rewards</li>
+                    <li>Customizable tasks and goals</li>
+                    <li>Collectible items based on performance</li>
+                    <li>User-friendly dashboard with visual statistics</li>
+                    <li>Role-based access for enhanced collaboration</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 p-4">
+                <h2 class="text-3xl font-bold text-gray-900">Our Vision</h2>
+                <p class="mt-4 text-gray-600">At Dedication, our vision is to empower individuals and teams to achieve their maximum potential through innovative and engaging productivity solutions. We believe that with the right tools, everyone can transform their workflow into an exciting journey of achievement and growth.</p>
+            </div>
+            <div class="md:w-1/2 p-4">
+                <img src="/static/images/preview.png" alt="Vision of Dedication" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bg-gray-100 py-16 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Rarity Progression</h2>
+        <div class="timeline">
+            <div class="timeline-stage bg-gray-400">
+                <h3 class="text-xl font-bold text-gray-600">Common</h3>
+                <p class="text-gray-500">The most basic items, abundant and easy to find.</p>
+            </div>
+            <div class="timeline-stage bg-green-400">
+                <h3 class="text-xl font-bold text-green-500">Uncommon</h3>
+                <p class="text-gray-500">Slightly rarer, offering better benefits.</p>
+            </div>
+            <div class="timeline-stage bg-blue-400">
+                <h3 class="text-xl font-bold text-blue-500">Rare</h3>
+                <p class="text-gray-500">More valuable, harder to come by.</p>
+            </div>
+            <div class="timeline-stage bg-purple-400">
+                <h3 class="text-xl font-bold text-purple-500">Epic</h3>
+                <p class="text-gray-500">Highly sought after, possessing unique attributes.</p>
+            </div>
+            <div class="timeline-stage bg-yellow-400">
+                <h3 class="text-xl font-bold text-yellow-500">Legendary</h3>
+                <p class="text-gray-500">Extraordinary items of great power.</p>
+            </div>
+            <div class="timeline-stage bg-orange-400">
+                <h3 class="text-xl font-bold text-orange-500">Mythic</h3>
+                <p class="text-gray-500">Almost mythical in nature, extremely rare.</p>
+            </div>
+            <div class="timeline-stage bg-pink-400">
+                <h3 class="text-xl font-bold text-pink-500">Supreme</h3>
+                <p class="text-gray-500">The pinnacle of rarity, nearly impossible to find.</p>
+            </div>
+            <div class="timeline-stage bg-indigo-500">
+                <h3 class="text-2xl font-bold text-gray-900">Transcendent</h3>
+                <p class="text-gray-500">A unique item, achievable only by combining all Supreme items.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        justify-items: center;
+        text-align: center;
+    }
+    .timeline-stage {
+        padding: 20px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    .timeline-stage:hover {
+        transform: scale(1.05);
+    }
+
+    /* Pyramid effect on desktop */
+    .timeline-stage:nth-child(1) {
+        grid-column: span 4;
+    }
+    .timeline-stage:nth-child(2),
+    .timeline-stage:nth-child(3) {
+        grid-column: span 2;
+    }
+    .timeline-stage:nth-child(4),
+    .timeline-stage:nth-child(5) {
+        grid-column: span 1;
+    }
+    .timeline-stage:nth-child(6),
+    .timeline-stage:nth-child(7) {
+        grid-column: span 2;
+    }
+    .timeline-stage:nth-child(8) {
+        grid-column: span 4;
+    }
+
+    /* Responsive design for mobile */
+    @media (max-width: 768px) {
+        .timeline {
+            grid-template-columns: 1fr;
+        }
+        .timeline-stage {
+            grid-column: span 1 !important;
+        }
+    }
+</style>
+
+<section class="bg-gray-100 text-gray-800 py-16 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-extrabold text-center">Unique Game Features</h2>
+      <p class="mt-4 text-center text-lg text-gray-500">Explore the dynamic elements that set Dedication apart</p>
+      
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <!-- Rebirthing -->
+        <div class="p-6 rounded-lg shadow-lg bg-gradient-to-r from-yellow-400 to-red-600 transform hover:-translate-y-1 transition hover:scale-105">
+          <div class="flex justify-center items-center h-16 w-16 bg-gradient-to-r from-green-400 to-blue-600 rounded-full mb-4">
+            <i class="fas fa-sync-alt text-2xl text-gray-800"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Rebirthing</h3>
+          <p class="text-white">Reset your progress, gain permanent bonuses, and start fresh to push even further. Each rebirth makes you more powerful.</p>
+        </div>
+  
+        <!-- Item Upgrading -->
+        <div class="p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-400 to-blue-600 transform hover:-translate-y-1 transition hover:scale-105">
+          <div class="flex justify-center items-center h-16 w-16 bg-gradient-to-r from-yellow-400 to-red-600 rounded-full mb-4">
+            <i class="fas fa-level-up-alt text-2xl text-gray-800"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Item Upgrading</h3>
+          <p class="text-white">Power up your items by leveling them up, increasing their effectiveness and rarity as you progress.</p>
+        </div>
+  
+        <!-- Item Merging -->
+        <div class="p-6 rounded-lg shadow-lg bg-gradient-to-r from-pink-500 to-purple-600 transform hover:-translate-y-1 transition hover:scale-105">
+          <div class="flex justify-center items-center h-16 w-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full mb-4">
+            <i class="fas fa-compress-arrows-alt text-2xl text-gray-800"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Item Merging</h3>
+          <p class="text-white">Combine items to create something more powerful, gaining unique attributes and better stats with each merge.</p>
+        </div>
+  
+        <!-- Infusion -->
+        <div class="p-6 rounded-lg shadow-lg bg-gradient-to-r from-red-500 to-orange-600 transform hover:-translate-y-1 transition hover:scale-105">
+          <div class="flex justify-center items-center h-16 w-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mb-4">
+            <i class="fas fa-fire-alt text-2xl text-gray-800"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Infusion</h3>
+          <p class="text-white">Spend your hard-earned XP to give your item a powerful rarity upgrade, increasing its value and power.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'ersites.html' %}
+</div>
+
+  
+
+
+
+{% endblock %}

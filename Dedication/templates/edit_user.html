@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto mt-10">
+  <h2 class="text-2xl font-bold text-center">Edit User - {{ user.username }}</h2>
+  
+  <form action="{{ url_for('edit_user', user_id=user.id) }}" method="POST" class="mt-8 space-y-6">
+    <!-- Role -->
+    <div>
+      <label for="role" class="block text-sm font-medium leading-6 text-gray-900">Role</label>
+      <div class="mt-2">
+        <select id="role" name="role" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          <option value="member" {% if user.role == 'member' %}selected{% endif %}>Member</option>
+          <option value="moderator" {% if user.role == 'moderator' %}selected{% endif %}>Moderator</option>
+          <option value="owner" {% if user.role == 'owner' %}selected{% endif %}>Owner</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- XP -->
+    <div>
+      <label for="xp" class="block text-sm font-medium leading-6 text-gray-900">XP</label>
+      <div class="mt-2">
+        <input id="xp" name="xp" type="number" value="{{ user.xp }}" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+    </div>
+
+    <!-- Save Button -->
+    <div>
+      <button type="submit" class="w-full flex justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:ring-indigo-500">Save Changes</button>
+    </div>
+  </form>
+
+  <!-- Back Button -->
+  <div class="mt-4 text-center">
+    <a href="{{ url_for('admin_panel') }}" class="text-indigo-600 hover:text-indigo-500">Back to Admin Panel</a>
+  </div>
+</div>
+{% endblock %}
